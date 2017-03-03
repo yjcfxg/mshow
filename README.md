@@ -1,39 +1,38 @@
 # mshow这个直播项目基于IJKMediaFramework，需要自己下载
 推流完成后，需要拉流才能进行完整的直播。拉流我们采用的也是一个开源的第三方库IJKMediaFramework。
-这个库本质是一个播放器，能播放flv格式的播放器。用起来和ios自带的AVPlayer很相似。
-实现功能：1.拉流播放。2.监听。
-一.创建占位图和卡顿占位动效，代码如下：
-
+这个库本质是一个播放器，能播放flv格式的播放器。用起来和ios自带的AVPlayer很相似。<br>
+实现功能：1.拉流播放。2.监听。<br>
+# 一.创建占位图和卡顿占位动效，代码如下：
 //直播前的占位图片
-- (UIImageView *)placeHolderView
+- (UIImageView *)placeHolderView<br>
 {
     if (!_placeHolderView) {
         _placeHolderView = [[UIImageView alloc] init];
-        _placeHolderView.frame = self.view.bounds;
-        _placeHolderView.image = [UIImage imageNamed:@"profile_user_414x414"];
+        _placeHolderView.frame = self.view.bounds;<br>
+        _placeHolderView.image = [UIImage imageNamed:@"profile_user_414x414"];<br>
         // 强制布局
         [_placeHolderView layoutIfNeeded];
-    }
+    }<br>
     return _placeHolderView;
 }
-//卡顿占位动效
+//卡顿占位动效<br>
 - (void)showActivityView{
-    if (!_activity) {
+    if (!_activity) {  
         _activity= [[UIActivityIndicatorView alloc]initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
         _activity.frame = CGRectMake((SCREAM_WEIGHT-100)*0.5, (SCREAM_HIGHT-100)*0.5, 100, 100);
     }
-    [self.activity startAnimating];
-    [self.view addSubview:self.activity];
+    [self.activity startAnimating];<br>
+    [self.view addSubview:self.activity];<br>
 }
-//关闭卡顿占位动效
+//关闭卡顿占位动效<br>
 - (void)stopActivityView{
     if ([_activity isAnimating]) {
         [_activity startAnimating];
     }
-    [_activity removeFromSuperview];
+    [_activity removeFromSuperview];<br>
     _activity = nil;
 }
-二.拉流播放（创建播放器播放），代码如下：
+# 二.拉流播放（创建播放器播放），代码如下：<br>
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -67,7 +66,8 @@
     
     [self.view addSubview:self.outBtn];
 }
-三.设置监听（主要是监听缓存情况），代码如下：
+</br>
+# 三.设置监听（主要是监听缓存情况），代码如下：<br>
 
 - (void)addObserver
 {
@@ -97,7 +97,7 @@
                 });
             }
         }
-    }
+    }<br>
     //缓冲中
     else if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled){
         [self showActivityView];
@@ -112,4 +112,4 @@
                 缺点：如果主播端丢包率太低，但是能够恢复的情况下，数据请求同样是失败的。
          */
     }
-}
+}</br>
