@@ -9,6 +9,7 @@
 #import "MJKMainViewController.h"
 #import "MJKMainTopView.h"
 #import "ALinWebViewController.h"
+#import "MJKSearchViewController.h"
 
 @interface MJKMainViewController ()<UIScrollViewDelegate>
 @property (strong, nonatomic) IBOutlet UIScrollView *contentScrollView;
@@ -57,9 +58,16 @@
 - (void)setupNav
 {
     self.navigationItem.titleView = self.topView;
-    self.navigationItem.leftBarButtonItem= [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStylePlain target:self action:nil];
+    self.navigationItem.leftBarButtonItem= [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"search_15x14"] style:UIBarButtonItemStylePlain target:self action:@selector(search)];
     self.navigationItem.rightBarButtonItem= [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"head_crown_24x24"] style:UIBarButtonItemStylePlain target:self action:@selector(rankCrown)];
   
+}
+
+#pragma mark ---- <push搜索栏>
+- (void)search {
+    MJKSearchViewController *searchVc = [[MJKSearchViewController alloc] init];
+    
+    [self.navigationController pushViewController:searchVc animated:YES];
 }
 
 - (void)rankCrown

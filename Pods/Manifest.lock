@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - BarrageRenderer (1.9.1)
   - LFLiveKit (2.6)
   - Masonry (1.0.2)
   - MBProgressHUD (1.0.0)
@@ -29,6 +30,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.1.0)
+  - BarrageRenderer
   - LFLiveKit
   - Masonry (~> 1.0.2)
   - MBProgressHUD
@@ -40,6 +42,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  BarrageRenderer: 55bbe4557d48adbdca6c1ebdfef96946fdb5e5b2
   LFLiveKit: 2219563721f8aa0f188effc3395a06e2d53b23f2
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
@@ -49,6 +52,6 @@ SPEC CHECKSUMS:
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: f699bd4809d330cecf170442aee1274c9a923725
+PODFILE CHECKSUM: 2e57b7c4c5ebebb77f5013407ab0a00f6b104b07
 
 COCOAPODS: 1.1.1

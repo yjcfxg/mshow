@@ -15,7 +15,7 @@
 #import "MJKAD.h"
 #import "AppDelegate.h"
 #import "MJRefresh.h"
-
+#import "MJKLivePlayerViewController.h"
 #define WIDTH [UIScreen mainScreen].bounds.size.width
 
 @interface MJKHotViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -190,14 +190,18 @@ static NSString *identifity = @"identifity";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    MJKLive *live = self.datalist[indexPath.row];
+//    MJKLive *live = self.datalist[indexPath.row];
     /*
      系统自带的播放不了直播视频
      */
-    MJKPlayerViewController *playerVC = [[MJKPlayerViewController alloc] init];
-    playerVC.live = live;
+    MJKLivePlayerViewController *liveVc = [[MJKLivePlayerViewController alloc] init];
+    liveVc.lives = self.datalist;
+    liveVc.currentIndex = indexPath.row;
+//    MJKPlayerViewController *playerVC = [[MJKPlayerViewController alloc] init];
+//    playerVC.live = live;
 //    playerVC.hidesBottomBarWhenPushed = YES;//push 时隐藏tabbar
-    [self.navigationController pushViewController:playerVC animated:YES];
+    [self.navigationController presentViewController:liveVc animated:YES completion:nil];
+//    [self.navigationController pushViewController:liveVc animated:YES];
     
     
 }

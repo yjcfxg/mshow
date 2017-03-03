@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UMSocialCore/UMSocialCore.h>
+//#import <UMSocialCore/UMSocialCore.h>
 
 typedef void (^FeelThidLoginCompletion)();
 @interface MJKThirdLogin : NSObject

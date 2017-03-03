@@ -12,7 +12,7 @@
 #import "MJKLocationManager.h"
 #import "MJKAdvertiseView.h"
 #import "AppDelegate+MJKUMeung.h"
-#import <UMSocialCore/UMSocialCore.h>
+//#import <UMSocialCore/UMSocialCore.h>
 #import "MJKUserHelper.h"
 #import "MJKLoginViewController.h"
 #import "HttpTools.h"
@@ -97,16 +97,18 @@
 }
 
 
-
+/*
 //#define __IPHONE_10_0    100000
 #if __IPHONE_OS_VERSION_MAX_ALLOWED > 100000
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey, id> *)options
 {
+    
     BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
     if (!result) {
         // 其他如支付等SDK的回调
     }
     return result;
+     
 }
 
 #endif
@@ -129,5 +131,6 @@
     return result;
 }
 
+ */
 
 @end

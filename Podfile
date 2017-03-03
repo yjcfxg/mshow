@@ -17,7 +17,7 @@ pod 'MJRefresh'
 #pod 'GPUImage', '~> 0.1.7' 由于LFLiveKit里面已经集成了GPUImage
 pod 'LFLiveKit'
 pod 'Reachability'
-
+pod 'BarrageRenderer'
   target 'mshowTests' do
     inherit! :search_paths
     # Pods for testing

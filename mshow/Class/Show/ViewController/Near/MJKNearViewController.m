@@ -11,7 +11,7 @@
 #import "MJKNearLiveCollectionViewCell.h"
 #import "MJKPlayerViewController.h"
 #import "MJRefresh.h"
-
+#import "MJKLivePlayerViewController.h"
 
 static NSString *identifity = @"identifity";
 #define KMargin 5
@@ -139,10 +139,12 @@ static NSString *identifity = @"identifity";
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-    MJKNearLive *Nearlive = self.datalist[indexPath.row];
-    MJKPlayerViewController *player = [[MJKPlayerViewController alloc] init];
-    player.NearLive = Nearlive;
-    [self.navigationController pushViewController:player animated:YES];
+//    MJKNearLive *Nearlive = self.datalist[indexPath.row];
+    MJKLivePlayerViewController *player = [[MJKLivePlayerViewController alloc] init];
+//    MJKPlayerViewController *player = [[MJKPlayerViewController alloc] init];
+    player.lives = self.datalist;
+    player.currentIndex = indexPath.row;
+    [self.navigationController presentViewController:player animated:YES completion:nil];
 }
 
 

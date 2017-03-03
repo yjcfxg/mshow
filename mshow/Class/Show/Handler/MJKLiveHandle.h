@@ -37,4 +37,6 @@
 
 +(void)execteGetAdvertiseTaskWithSuccess:(SuccessBlock)success failed:(FailedBlock)failed;
 
+
+
 @end

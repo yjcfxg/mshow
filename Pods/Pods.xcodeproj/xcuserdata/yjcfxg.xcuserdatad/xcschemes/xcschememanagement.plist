@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BarrageRenderer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>LFLiveKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,6 +82,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>2841FD25B3EC1B9883AB6B62DBD1D73C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4C214ACCD8D9ED5141534389A93BEB42</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>52C8BCB9E2375D452368E3EAB3BC50C5</key>
 		<dict>
 			<key>primary</key>
@@ -87,17 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>58FAE4DE07249E5CF969B1F959B308AE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>64E4032A89C73231BEDF33F1822AD34E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B595E0E9E38110DF5B23C22BFD6DE33</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>82C3444068AE3FA782BD103F1EA3D685</key>
+		<key>8BF92B96BEAFAE4D31A14A9FCD358312</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -112,17 +127,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A000443A1D995E798218D8D0C951A3BB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A20A186EDE79A7F433ABF356F321CC52</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EE07CC6A21F081218804B821BC75AD0C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -21,10 +21,16 @@
 - (IBAction)LiveEdit:(UITextField *)sender {
     
 }
+//- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
+//{
+////    //回收键盘
+////    [self.TextLive resignFirstResponder];
+//    
+//}
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
-    [textField endEditing:YES];
+//    [self.TextLive endEditing:YES];
 }
 - (IBAction)closeButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -32,6 +38,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.TextLive.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 - (IBAction)startLive:(id)sender {
@@ -52,14 +59,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

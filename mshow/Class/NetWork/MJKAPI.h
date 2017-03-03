@@ -115,10 +115,40 @@ http://service.inke.com/api/live/near_flow_old?&uid=154362385&latitude=40.099857
 
 
 /**
-  api/user/info
+  api/user/info  直播用户
  */
 /*
 http://120.55.238.158/api/user/info?&uid=154362385
+*/
+/*
+http://120.55.238.158/api/user/info?lc=0000000000000048&cc=TG0001&cv=IK3.8.60_Iphone&proto=7&idfa=5A950F15-AE0A-4DA5-8BB0-831F099300C3&idfv=D463910D-C79C-48B5-815F-B5164C407D24&devi=9024af76b5a7eb85db96873faf4783a46a4e1776&osversion=ios_10.200000&ua=iPhone8_1&imei=&imsi=&uid=154362385&sid=20c5PVyGPr8z1iei002g2z2nOFgJz4UuOai01Fep4GgyS4khfjDn&conn=wifi&mtid=d51b7e5758ecc3048c4655efbf0ba784&mtxid=c83a3510d3c8&logid=164,133,175&id=154362385&s_sg=a6097c6b97333570755627e0fba7474a&s_sc=100&s_st=1487127795 HTTP/1.1
+ 
+ 
+ {
+	"dm_error": 0,
+	"error_msg": "操作成功",
+	"user": {
+ "birth": "",
+ "description": "",
+ "emotion": "",
+ "gender": 1,
+ "gmutex": 0,
+ "hometown": "",
+ "id": 154362385,
+ "inke_verify": 0,
+ "level": 3,
+ "location": "北京市",
+ "nick": "雨一直下",
+ "portrait": "http://wx.qlogo.cn/mmopen/C9QznKczMm0Eib9Ee8d7BaFMZicervWoMribdlqvS9q21woHuooktSnLCHAcQtSmt9yLAZlwT47OsicXHKPjjt0zhkWtZwnKHOoG/0",
+ "profession": "",
+ "rank_veri": 3,
+ "sex": 1,
+ "third_platform": "0",
+ "veri_info": "",
+ "verified": 0,
+ "verified_reason": ""
+	}
+ }
 */
 
 

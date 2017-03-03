@@ -10,7 +10,7 @@
 
 #import "MJKThirdLoginView.h"
 #import "MJKTabBarViewController.h"
-#import <UMSocialCore/UMSocialCore.h>
+//#import <UMSocialCore/UMSocialCore.h>
 #import "MJKUserHelper.h"
 
 @interface MJKLoginViewController ()
@@ -90,7 +90,9 @@
 
 - (void)loginType:(LoginType)type
 {
+    /*
     if (type == LoginTypeSina) {
+     
         [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_Sina currentViewController:nil completion:^(id result, NSError *error) {
             if (error) {
                 
@@ -116,7 +118,9 @@
                 NSLog(@"Sina originalResponse: %@", resp.originalResponse);
             }
         }];
+     
     }else if (type == LoginTypeQQ){
+        
         [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_QQ currentViewController:nil completion:^(id result, NSError *error) {
             if (error) {
                 
@@ -142,6 +146,7 @@
                 NSLog(@"QQ originalResponse: %@", resp.originalResponse);
             }
         }];
+     
     }else{
     [[UMSocialManager defaultManager] getUserInfoWithPlatform:UMSocialPlatformType_WechatSession currentViewController:nil completion:^(id result, NSError *error) {
         if (error) {
@@ -167,6 +172,8 @@
     }];
 
     }
+*/
+    [self loginSuccess];
 }
 - (UIImageView *)coverView
 {
