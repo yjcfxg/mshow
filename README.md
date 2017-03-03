@@ -75,25 +75,25 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadStateDidChange:) name:IJKMPMoviePlayerLoadStateDidChangeNotification object:self.moviePlayer];<br>
 }
 
-- (void)loadStateDidChange:(NSNotification *) notification
+- (void)loadStateDidChange:(NSNotification *) notification<br>
 {
     //状态为缓冲几乎完成，可以连续播放<br>
     if ((self.moviePlayer.loadState & IJKMPMovieLoadStatePlaythroughOK) != 0) {
         if (!self.moviePlayer.isPlaying) {
-            //开始播放
+            //开始播放<br>
             [self.moviePlayer play];<br>
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 if (_placeHolderView) {
                     [_placeHolderView removeFromSuperview];
                     _placeHolderView = nil;
-                }
+                }<br>
                 [self stopActivityView];<br>
             });
         }else{
             // 如果是网络状态不好, 断开后恢复, 也需要去掉加载 <br>
             if ([_activity isAnimating]) {
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                    [self stopActivityView];
+                    [self stopActivityView];<br>
                 });
             }
         }
