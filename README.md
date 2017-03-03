@@ -71,26 +71,26 @@
 
 - (void)addObserver
 {
-    //监听加载状态改变通知
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadStateDidChange:) name:IJKMPMoviePlayerLoadStateDidChangeNotification object:self.moviePlayer];
+   <br> //监听加载状态改变通知
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(loadStateDidChange:) name:IJKMPMoviePlayerLoadStateDidChangeNotification object:self.moviePlayer];<br>
 }
 
 - (void)loadStateDidChange:(NSNotification *) notification
 {
-    //状态为缓冲几乎完成，可以连续播放
+    //状态为缓冲几乎完成，可以连续播放<br>
     if ((self.moviePlayer.loadState & IJKMPMovieLoadStatePlaythroughOK) != 0) {
         if (!self.moviePlayer.isPlaying) {
             //开始播放
-            [self.moviePlayer play];
+            [self.moviePlayer play];<br>
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 if (_placeHolderView) {
                     [_placeHolderView removeFromSuperview];
                     _placeHolderView = nil;
                 }
-                [self stopActivityView];
+                [self stopActivityView];<br>
             });
         }else{
-            // 如果是网络状态不好, 断开后恢复, 也需要去掉加载
+            // 如果是网络状态不好, 断开后恢复, 也需要去掉加载 <br>
             if ([_activity isAnimating]) {
                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                     [self stopActivityView];
@@ -100,16 +100,16 @@
     }<br>
     //缓冲中
     else if (self.moviePlayer.loadState & IJKMPMovieLoadStateStalled){
-        [self showActivityView];
+        [self showActivityView];<br>
         /*  
             这里主播可能已经结束直播了。我们需要请求服务器查看主播是否已经结束直播。
-            方法：
-            1、从服务器获取主播是否已经关闭直播。
+            方法：<br>
+            1、从服务器获取主播是否已经关闭直播。<br>
                 优点：能够正确的获取主播端是否正在直播。
                 缺点：主播端异常crash的情况下是没有办法通知服务器该直播关闭的。
-            2、用户http请求该地址，若请求成功表示直播未结束，否则结束
+            2、用户http请求该地址，若请求成功表示直播未结束，否则结束<br>
                 优点：能够真实的获取主播端是否有推流数据
                 缺点：如果主播端丢包率太低，但是能够恢复的情况下，数据请求同样是失败的。
-         */
+         */<br>
     }
 }</br>
